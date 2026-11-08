@@ -278,6 +278,7 @@ const LIGHT_BASE_THEMES = [
 ]
 
 const DARK_BASE_THEMES = [
+  'noir',
   'dark',
   'black',
   'nordic',

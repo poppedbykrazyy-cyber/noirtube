@@ -1,8 +1,8 @@
 {
-  "name": "freetube",
-  "productName": "FreeTube",
-  "description": "A private YouTube client",
-  "version": "0.26.0",
+  "name": "noirtube",
+  "productName": "NoirTube",
+  "description": "A black and white, ad-free YouTube client based on FreeTube",
+  "version": "1.0.0",
   "license": "AGPL-3.0-or-later",
   "main": "./dist/main.js",
   "private": true,

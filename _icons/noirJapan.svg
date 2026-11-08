@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".22"/>
+    </linearGradient>
+    <linearGradient id="fuji" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bdbdbd"/>
+      <stop offset="1" stop-color="#3a3a3a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sun -->
+  <circle cx="1060" cy="250" r="150" fill="#d9d9d9" opacity=".55"/>
+
+  <!-- Far hills -->
+  <path d="M0 640 C160 600 260 610 380 630 S640 600 760 620 1000 600 1140 625 1420 610 1600 630 V900 H0Z" fill="#2a2a2a"/>
+
+  <!-- Mount Fuji -->
+  <path d="M520 640 L760 330 Q800 300 840 330 L1080 640Z" fill="url(#fuji)"/>
+  <path d="M700 408 L760 330 Q800 300 840 330 L900 408 L870 395 L850 420 L825 398 L800 428 L776 398 L752 420 L732 395Z" fill="#f2f2f2"/>
+
+  <!-- Mist band -->
+  <rect x="0" y="560" width="1600" height="110" fill="url(#mist)"/>
+
+  <!-- Pagoda -->
+  <g fill="#111" stroke="#9a9a9a" stroke-width="2">
+    <rect x="263" y="400" width="6" height="40" stroke="none" fill="#9a9a9a"/>
+    <path d="M200 470 Q266 440 332 470 L318 476 H214Z"/>
+    <rect x="228" y="476" width="76" height="34"/>
+    <path d="M186 520 Q266 486 346 520 L330 526 H202Z"/>
+    <rect x="220" y="526" width="92" height="38"/>
+    <path d="M172 574 Q266 536 360 574 L342 580 H190Z"/>
+    <rect x="212" y="580" width="108" height="42"/>
+    <path d="M158 632 Q266 590 374 632 L354 638 H178Z"/>
+    <rect x="204" y="638" width="124" height="46"/>
+    <path d="M144 694 Q266 646 388 694 L366 700 H166Z"/>
+    <rect x="196" y="700" width="140" height="52"/>
+  </g>
+
+  <!-- Lake -->
+  <path d="M0 740 H1600 V900 H0Z" fill="#0d0d0d"/>
+  <g stroke="#5c5c5c" stroke-width="3" stroke-linecap="round" opacity=".7">
+    <path d="M620 770 H980"/>
+    <path d="M680 792 H920"/>
+    <path d="M730 812 H870"/>
+    <path d="M90 800 H260"/>
+    <path d="M1300 820 H1500"/>
+  </g>
+  <!-- Fuji reflection -->
+  <path d="M640 742 L800 880 L960 742Z" fill="#2f2f2f" opacity=".6"/>
+
+  <!-- Torii gate in the water -->
+  <g fill="#e6e6e6">
+    <path d="M1250 560 Q1350 540 1470 548 Q1490 548 1500 540 L1496 562 Q1360 568 1240 578Z"/>
+    <rect x="1262" y="590" width="226" height="14"/>
+    <rect x="1286" y="570" width="22" height="200"/>
+    <rect x="1440" y="568" width="22" height="202"/>
+    <rect x="1364" y="576" width="14" height="28"/>
+  </g>
+  <path d="M1286 772 H1308 L1302 860 H1292Z M1440 772 H1462 L1456 860 H1446Z" fill="#e6e6e6" opacity=".25"/>
+
+  <!-- Cherry blossom branch -->
+  <g>
+    <path d="M1600 40 C1500 70 1420 60 1340 110 C1300 135 1260 140 1210 150 M1420 72 C1400 40 1370 30 1340 28 M1340 110 C1330 150 1300 175 1270 190" fill="none" stroke="#bfbfbf" stroke-width="7" stroke-linecap="round"/>
+    <g fill="#f5f5f5">
+      <circle cx="1210" cy="150" r="9"/><circle cx="1232" cy="138" r="7"/><circle cx="1270" cy="190" r="9"/>
+      <circle cx="1290" cy="170" r="7"/><circle cx="1340" cy="28" r="8"/><circle cx="1362" cy="40" r="6"/>
+      <circle cx="1380" cy="96" r="8"/><circle cx="1452" cy="62" r="7"/><circle cx="1500" cy="70" r="9"/>
+      <circle cx="1548" cy="54" r="7"/><circle cx="1310" cy="122" r="6"/><circle cx="1250" cy="160" r="5"/>
+    </g>
+    <g fill="#d0d0d0">
+      <circle cx="1180" cy="230" r="4"/><circle cx="1120" cy="300" r="3"/><circle cx="1230" cy="320" r="4"/>
+      <circle cx="1060" cy="420" r="3"/><circle cx="1160" cy="470" r="3"/>
+    </g>
+  </g>
+
+  <!-- Birds -->
+  <g fill="none" stroke="#cfcfcf" stroke-width="3" stroke-linecap="round">
+    <path d="M420 200 q12 -12 24 0 q12 -12 24 0"/>
+    <path d="M490 240 q9 -9 18 0 q9 -9 18 0"/>
+    <path d="M380 260 q8 -8 16 0 q8 -8 16 0"/>
+  </g>
+</svg>

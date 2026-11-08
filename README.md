@@ -1,3 +1,20 @@
+# NoirTube
+
+A black and white, ad-free YouTube app for Windows, built on [FreeTube](https://github.com/FreeTubeApp/FreeTube).
+
+What's different from FreeTube:
+
+- **Noir theme by default**: pure black and white, with a faint black and white Japan scene in the background.
+- **Category tabs on your feed**: All, Rivals and any others you add. Each tab shows videos whose title or channel name matches its words. Use **+ Category** to add one and **Edit** to change or delete them.
+- **Import my YouTube**: an empty feed shows how to bring your YouTube subscriptions over with Google Takeout.
+- Installs as its own app (NoirTube), so it can sit next to FreeTube.
+
+Builds: Windows only (installer and portable .exe), made by `.github/workflows/noirtube-windows.yml` and published as a GitHub release.
+
+NoirTube is licensed under the AGPL-3.0, like FreeTube. The original FreeTube README follows.
+
+---
+
 <p align="center">
  <img alt="" src="/_icons/logoColor.svg" width=500 align="center">
 </p>

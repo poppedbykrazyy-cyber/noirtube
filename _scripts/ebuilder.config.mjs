@@ -2,7 +2,7 @@ import packageDetails from '../package.json' with { type: 'json' }
 
 /** @type {import('electron-builder').Configuration} */
 export default {
-  appId: `io.freetubeapp.${packageDetails.name}`,
+  appId: 'io.noirtube.app',
   copyright: 'Copyleft © 2020-2026',
   // asar: false,
   // compression: 'store',
@@ -12,7 +12,7 @@ export default {
   },
   protocols: [
     {
-      name: 'FreeTube',
+      name: 'NoirTube',
       schemes: [
         'freetube'
       ]
@@ -132,10 +132,14 @@ export default {
   },
   win: {
     icon: '_icons/icon.ico',
-    target: ['nsis', 'zip', '7z', 'portable'],
+    target: ['nsis', 'portable'],
   },
   nsis: {
     allowToChangeInstallationDirectory: true,
     oneClick: false,
+    artifactName: 'NoirTube-Setup-${version}.${ext}',
+  },
+  portable: {
+    artifactName: 'NoirTube-Portable-${version}.${ext}',
   },
 }

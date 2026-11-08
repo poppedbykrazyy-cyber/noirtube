@@ -1,0 +1,50 @@
+name: NoirTube Windows build
+
+on:
+  push:
+    branches: [development, claude/patrick-jane-training-app-8w08re]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - run: pnpm install --frozen-lockfile
+        shell: bash
+
+      - name: Read version
+        id: v
+        shell: bash
+        run: echo "version=$(jq -r .version package.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Build Windows installer and portable exe
+        shell: bash
+        run: pnpm run build
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.v.outputs.version }}
+          name: NoirTube ${{ steps.v.outputs.version }}
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          body: |
+            NoirTube ${{ steps.v.outputs.version }} for Windows.
+            NoirTube-Setup is the installer. NoirTube-Portable runs without installing.
+            Based on FreeTube (AGPL-3.0).
+          files: |
+            build/NoirTube-Setup-*.exe
+            build/NoirTube-Portable-*.exe

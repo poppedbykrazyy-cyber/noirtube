@@ -1,6 +1,5 @@
 import { MAIN_PROFILE_ID } from '../../../constants'
 import { DBProfileHandlers } from '../../../datastores/handlers/index'
-import { calculateColorLuminance, getRandomColor } from '../../helpers/colors'
 import { deepCopy } from '../../helpers/utils'
 
 const state = {
@@ -69,13 +68,12 @@ const actions = {
 
     if (profiles.length === 0) {
       // Create a default profile and persist it
-      const randomColor = getRandomColor().value
-      const textColor = calculateColorLuminance(randomColor)
+      // NoirTube: the first profile is plain white on black
       const defaultProfile = {
         _id: MAIN_PROFILE_ID,
         name: defaultName,
-        bgColor: randomColor,
-        textColor: textColor,
+        bgColor: '#f2f2f2',
+        textColor: '#000000',
         subscriptions: []
       }
 

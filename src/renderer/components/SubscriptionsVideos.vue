@@ -1,13 +1,20 @@
 <template>
-  <SubscriptionsTabUi
-    :is-loading="isLoading"
-    :video-list="videoList"
-    :error-channels="errorChannels"
-    :last-refresh-timestamp="lastVideoRefreshTimestamp"
-    :attempted-fetch="attemptedFetch"
-    :title="t('Global.Videos')"
-    @refresh="loadVideosForSubscriptionsFromRemote"
-  />
+  <div>
+    <NoirCategoryBar
+      v-if="!isLoading && videoList.length > 0"
+      :video-list="videoList"
+      @change="filteredVideoList = $event"
+    />
+    <SubscriptionsTabUi
+      :is-loading="isLoading"
+      :video-list="filteredVideoList"
+      :error-channels="errorChannels"
+      :last-refresh-timestamp="lastVideoRefreshTimestamp"
+      :attempted-fetch="attemptedFetch"
+      :title="t('Global.Videos')"
+      @refresh="loadVideosForSubscriptionsFromRemote"
+    />
+  </div>
 </template>
 
 <script setup>
@@ -15,6 +22,7 @@ import { computed, onMounted, ref, shallowRef, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import SubscriptionsTabUi from './SubscriptionsTabUi/SubscriptionsTabUi.vue'
+import NoirCategoryBar from './NoirCategoryBar.vue'
 
 import store from '../store/index'
 
@@ -32,6 +40,8 @@ const { t } = useI18n()
 
 const isLoading = ref(true)
 const videoList = shallowRef([])
+const filteredVideoList = shallowRef([])
+watch(videoList, (list) => { if (list.length === 0) { filteredVideoList.value = [] } })
 const errorChannels = ref([])
 const attemptedFetch = ref(false)
 /** @type {import('vue').Ref<number | null>} */

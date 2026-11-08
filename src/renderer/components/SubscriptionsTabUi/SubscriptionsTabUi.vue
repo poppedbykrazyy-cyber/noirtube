@@ -29,6 +29,26 @@
         >
           {{ $t("Subscriptions['Your Subscription list is currently empty. Start adding subscriptions to see them here.']") }}
         </p>
+        <!-- NoirTube is English-only, so this hint is not translated -->
+        <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
+        <div
+          v-if="!activeProfileHasSubscriptions"
+          class="noirImport"
+        >
+          <h3>Import my YouTube</h3>
+          <ol>
+            <li>Go to <b>takeout.google.com</b> and pick only <b>YouTube and YouTube Music</b>, then only <b>subscriptions</b>.</li>
+            <li>Download it and unzip it. You'll get a file called <b>subscriptions.csv</b>.</li>
+            <li>Open <b>Settings → Data Settings → Import Subscriptions</b> and pick that file.</li>
+          </ol>
+          <router-link
+            to="/settings"
+            class="noirImportButton"
+          >
+            Open Settings
+          </router-link>
+        </div>
+        <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
         <p
           v-else-if="!fetchSubscriptionsAutomatically && !attemptedFetch"
           class="message"

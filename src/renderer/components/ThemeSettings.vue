@@ -118,6 +118,7 @@ const { t } = useI18n()
 
 const BASE_THEME_VALUES = [
   // First group
+  'noir',
   'system',
   'light',
   'dark',
@@ -145,6 +146,7 @@ const BASE_THEME_VALUES = [
 
 const baseThemeNames = computed(() => [
   // First group
+  t('Settings.Theme Settings.Base Theme.Noir'),
   t('Settings.Theme Settings.Base Theme.System Default'),
   t('Settings.Theme Settings.Base Theme.Light'),
   t('Settings.Theme Settings.Base Theme.Dark'),

@@ -2164,3 +2164,60 @@ a:visited {
 body:has(.prompt) {
   overflow: hidden;
 }
+
+
+/*************** NOIRTUBE ***************/
+/* stylelint-disable selector-no-qualifying-type */
+
+/* Pure black and white. `body.noir` beats the main/secondary color classes, so the theme stays mono whatever colors are picked. */
+body.noir {
+  --primary-text-color: #f2f2f2;
+  --secondary-text-color: #c8c8c8;
+  --tertiary-text-color: #8a8a8a;
+  --title-color: #fff;
+  --bg-color: #000;
+  --favorite-icon-color: #fff;
+  --card-bg-color: rgb(12 12 12 / 82%);
+  --secondary-card-bg-color: rgb(0 0 0 / 78%);
+  --scrollbar-color: #4a4a4a;
+  --scrollbar-color-hover: #6a6a6a;
+  --side-nav-color: rgb(0 0 0 / 88%);
+  --side-nav-hover-color: #1c1c1c;
+  --side-nav-active-color: #2a2a2a;
+  --search-bar-color: #151515;
+  --primary-color: #f2f2f2;
+  --primary-color-hover: #d6d6d6;
+  --primary-color-active: #bdbdbd;
+  --text-with-main-color: #000;
+  --accent-color-rgb: 242 242 242;
+  --accent-color-hover: #d6d6d6;
+  --accent-color-active: #bdbdbd;
+  --accent-color-light: #fff;
+  --accent-color-visited: #a8a8a8;
+  --text-with-accent-color: #000;
+  --link-color: #fff;
+  --logo-icon: url('../../_icons/iconNoirSmall.svg');
+  --logo-text: url('../../_icons/textNoirSmall.svg');
+  --logo-icon-bar-color: url('../../_icons/iconNoirSmall.svg');
+  --logo-text-bar-color: url('../../_icons/textNoirSmall.svg');
+  --logo-primary-color: #fff;
+  --logo-secondary-color: #fff;
+  --logo-tertiary-color: #fff;
+}
+
+/* Let the Japan scene show through the main layout */
+body.noir .app {
+  background-color: transparent;
+}
+
+/* Black and white Japan scene, faint, behind everything */
+body.noir::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('../../_icons/noirJapan.svg') center bottom / cover no-repeat;
+  opacity: 0.32;
+  pointer-events: none;
+}
+/* stylelint-enable selector-no-qualifying-type */

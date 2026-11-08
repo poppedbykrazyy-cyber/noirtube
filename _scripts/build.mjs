@@ -22,7 +22,7 @@ if (platform === 'darwin') {
     arch = Arch.arm64
   }
 
-  targets = Platform.WINDOWS.createTarget(['nsis', 'zip', '7z', 'portable'], arch)
+  targets = Platform.WINDOWS.createTarget(['nsis', 'portable'], arch)
 } else if (platform === 'linux') {
   let arch = Arch.x64
 

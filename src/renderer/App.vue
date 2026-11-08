@@ -245,7 +245,7 @@ const secColor = computed(() => store.getters.getSecColor)
 watch(secColor, updateTheme)
 
 function updateTheme() {
-  document.body.className = `${baseTheme.value || 'system'} main${mainColor.value || 'Red'} sec${secColor.value || 'Blue'}`
+  document.body.className = `${baseTheme.value || 'noir'} main${mainColor.value || 'Red'} sec${secColor.value || 'Blue'}`
   document.body.dataset.systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
