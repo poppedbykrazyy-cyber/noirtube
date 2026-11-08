@@ -31,6 +31,8 @@ export function isKeyboardEventKeyPrintableChar(eventKey) {
  */
 export function translateWindowTitle(title) {
   switch (title) {
+    case 'For You':
+      return 'For You'
     case 'Subscriptions':
       return i18n.global.t('Subscriptions.Subscriptions')
     case 'Channels':

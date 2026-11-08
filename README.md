@@ -6,7 +6,8 @@ What's different from FreeTube:
 
 - **Noir theme by default**: pure black and white, with a faint black and white Japan scene in the background.
 - **Category tabs on your feed**: All, Rivals and any others you add. Each tab shows videos whose title or channel name matches its words. Use **+ Category** to add one and **Edit** to change or delete them.
-- **Import my YouTube**: an empty feed shows how to bring your YouTube subscriptions over with Google Takeout.
+- **For You page** (the start page): mixes new uploads from your subscriptions with videos YouTube suggests next to what you watch and follow. Topics you watch a lot get boosted, watched videos are hidden, and no channel gets more than 3 spots. Everything is worked out on your PC, with no Google account.
+- **Copy my subscriptions**: copy a small script, run it on youtube.com/feed/channels in your normal browser, and paste the result into NoirTube. It's on the empty feed and at the top of Settings → Data. Google Takeout import still works too.
 - Installs as its own app (NoirTube), so it can sit next to FreeTube.
 
 Builds: Windows only (installer and portable .exe), made by `.github/workflows/noirtube-windows.yml` and published as a GitHub release.

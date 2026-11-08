@@ -44,3 +44,9 @@
   font-weight: 700;
   text-decoration: none;
 }
+
+.noirOr {
+  margin-block-start: 22px;
+  padding-block-start: 16px;
+  border-block-start: 1px solid var(--tertiary-text-color);
+}

@@ -8,8 +8,32 @@
       class="inner"
       :class="applyHiddenLabels"
     >
+      <!-- NoirTube: For You page (English-only label) -->
+      <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
       <router-link
         class="navOption topNavOption mobileShow "
+        role="button"
+        to="/foryou"
+        title="For You"
+      >
+        <div
+          class="thumbnailContainer"
+        >
+          <FontAwesomeIcon
+            :icon="['fas', 'fire']"
+            class="navIcon"
+            :class="applyNavIconExpand"
+          />
+        </div>
+        <p
+          class="navLabel"
+        >
+          For You
+        </p>
+      </router-link>
+      <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
+      <router-link
+        class="navOption mobileShow "
         role="button"
         to="/subscriptions"
         :title="$t('Subscriptions.Subscriptions')"

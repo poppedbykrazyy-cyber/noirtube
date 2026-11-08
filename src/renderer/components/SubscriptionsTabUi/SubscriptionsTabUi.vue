@@ -35,7 +35,10 @@
           v-if="!activeProfileHasSubscriptions"
           class="noirImport"
         >
-          <h3>Import my YouTube</h3>
+          <NoirCopySubscriptions />
+          <h3 class="noirOr">
+            Or use Google Takeout
+          </h3>
           <ol>
             <li>Go to <b>takeout.google.com</b> and pick only <b>YouTube and YouTube Music</b>, then only <b>subscriptions</b>.</li>
             <li>Download it and unzip it. You'll get a file called <b>subscriptions.csv</b>.</li>
@@ -102,6 +105,7 @@ import FtElementList from '../FtElementList/FtElementList.vue'
 import FtFlexBox from '../ft-flex-box/ft-flex-box.vue'
 import FtLoader from '../FtLoader/FtLoader.vue'
 import FtRefreshWidget from '../FtRefreshWidget/FtRefreshWidget.vue'
+import NoirCopySubscriptions from '../NoirCopySubscriptions.vue'
 
 import store from '../../store/index'
 

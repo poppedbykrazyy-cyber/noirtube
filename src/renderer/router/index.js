@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Subscriptions from '../views/Subscriptions/Subscriptions.vue'
+import ForYou from '../views/ForYou/ForYou.vue'
 import SubscribedChannels from '../views/SubscribedChannels/SubscribedChannels.vue'
 import ProfileSettings from '../views/ProfileSettings/ProfileSettings.vue'
 import Trending from '../views/Trending/Trending.vue'
@@ -25,6 +26,14 @@ const router = createRouter({
         title: 'Subscriptions'
       },
       component: Subscriptions
+    },
+    {
+      path: '/foryou',
+      name: 'forYou',
+      meta: {
+        title: 'For You'
+      },
+      component: ForYou
     },
     {
       path: '/subscriptions',

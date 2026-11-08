@@ -2,6 +2,9 @@
   <FtSettingsSection
     :title="$t('Settings.Data Settings.Data Settings')"
   >
+    <div class="noirCopyBox">
+      <NoirCopySubscriptions />
+    </div>
     <h4 class="groupTitle">
       {{ $t('Subscriptions.Subscriptions') }}
     </h4>
@@ -116,6 +119,7 @@ import FtButton from '../FtButton/FtButton.vue'
 import FtFlexBox from '../ft-flex-box/ft-flex-box.vue'
 import FtPrompt from '../FtPrompt/FtPrompt.vue'
 import FtSettingsSection from '../FtSettingsSection/FtSettingsSection.vue'
+import NoirCopySubscriptions from '../NoirCopySubscriptions.vue'
 import FtTooltip from '../FtTooltip/FtTooltip.vue'
 
 import store from '../../store/index'

@@ -607,6 +607,30 @@ function createWatchNextRequestBody(videoId) {
 }
 
 /**
+ * NoirTube: only the "up next" list for a video, without loading the player.
+ * Used to build the For You page.
+ * @param {string} id
+ * @returns {Promise<object[]>}
+ */
+export async function getLocalRelatedVideos(id) {
+  const innertube = await createInnertube()
+  const response = await innertube.actions.execute('/next', createWatchNextRequestBody(id))
+  const parsed = Parser.parseResponse(response.data)
+  const nodes = parsed.contents_memo?.getType(YTNodes.LockupView, YTNodes.CompactVideo) ?? []
+
+  const videos = []
+  for (const node of nodes) {
+    try {
+      const video = parseLocalWatchNextVideo(node)
+      if (video && video.type === 'video' && video.videoId && video.videoId !== id) {
+        videos.push(video)
+      }
+    } catch { }
+  }
+  return videos
+}
+
+/**
  * @param {string} id
  * @returns {Promise<{
  *   info: import('youtubei.js').YT.VideoInfo,
